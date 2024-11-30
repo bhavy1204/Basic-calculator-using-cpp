@@ -118,7 +118,7 @@ int main()
     if (op == 'H' || op == 'h')
         c.manual();
     else if(op=='T'|| op =='t')
-        cout<<"Not available right now....";
+        cout<<"Building....";
     else
         c.calculation(op);
     } while (op!='q');
