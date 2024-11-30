@@ -10,13 +10,15 @@ public:
     void manual()
     {
     cout << "Welcome to manual !" << endl;
+    cout << "0. Enter 'Q' to exit from calculator "<<endl;
     cout << "1. Enter '%' at operation for finding remainder " << endl;
     cout << "2. Enter 'S' at operation for finding square root of number " << endl;
     cout << "3. Enter 'A' at operation for avg " << endl;
     cout << "4. Enter 'M' at operation for finding max of two numbers " << endl;
     cout << "5. Enter '!' at operation for finding factorial of a number " << endl;
     cout << "6. Enter '|' at operation for finding absolute of two numbers " << endl;
-    cout << "6. Enter 'P' at operation for Exponent of anumber " << endl;
+    cout << "7. Enter 'P' at operation for Exponent of anumber " << endl;
+    cout << "8. Enter 'T' for trignometric calculations " << endl;
     }
     //For taking input from user
     void input(){
@@ -83,6 +85,9 @@ public:
             input();
             cout<<pow(a,b);
             break;
+        case 'q':
+            cout<<"Exiting";
+            break;
         default:
             cout<<" INVALID SYNTAX ";
             break;
@@ -100,14 +105,22 @@ public:
 };
 int main()
 {
+    system("cls");
     calculator c;
     char op;
+    do
+    {
+    cout<<"\n---------------------------------------------------------------"<<endl;
     cout << "Enter 'h' for a manual to use operations !" << endl;
     cout << "Enter your operation(+,-,!,/....etc):- " << endl;
     cin >> op;
+    cout<<"---------------------------------------------------------------"<<endl;
     if (op == 'H' || op == 'h')
         c.manual();
+    else if(op=='T'|| op =='t')
+        cout<<"Not available right now....";
     else
         c.calculation(op);
+    } while (op!='q');
     return 0;
 }
