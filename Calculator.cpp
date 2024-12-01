@@ -14,7 +14,7 @@ public:
     cout << "1. Enter '%' at operation for finding remainder " << endl;
     cout << "2. Enter 'S' at operation for finding square root of number " << endl;
     cout << "3. Enter 'A' at operation for avg " << endl;
-    cout << "4. Enter 'M' at operation for finding max of two numbers " << endl;
+    cout << "4. Enter 'M' at operation for finding max and min of two numbers"<< endl;
     cout << "5. Enter '!' at operation for finding factorial of a number " << endl;
     cout << "6. Enter '|' at operation for finding absolute of two numbers " << endl;
     cout << "7. Enter 'P' at operation for Exponent of anumber " << endl;
@@ -32,58 +32,63 @@ public:
         switch (op){
         case '+':
             input();
-            cout << a + b;
+            cout <<"Result : "<< a + b;
             break;
         case '-':
             input();
-            cout << a - b;
+            cout <<"Result : "<< a - b;
             break;
         case '*':
             input();
-            cout << a * b;
+            cout <<"Result : "<< a * b;
             break;
         case '/':
             input();
             if (b!=0)
-               cout << a / b;
+               cout <<"Result : "<< a / b;
             else
                cout<<"Divison by zero not allowed";
             break;
         //remainder of two numbers
         case '%':
             input();
-            cout << int(a) % int(b);
+            cout <<"Result : "<< int(a) % int(b);
             break;
         //average of two numbers
         case 'A':
             input();
-            cout << (a + b) / 2.0;
+            cout <<"Result : "<< (a + b) / 2.0;
             break;
         //absolute of two numbers
         case '|':
             input();
-            cout<<abs(a-b);
+            cout<<"Result : "<<abs(a-b);
             break;
         //Max of 2 numbers
         case 'M':
             input();
-            cout <<max(a,b) ;
+            cout <<"Max : "<<max(a,b)<<endl;
+            cout <<"Min : "<<min(a,b)<<endl;
             break;
         //Square root
         case 'S':
-            cout<<"Enter num : ";
+            do{
+            cout<<"Enter a +ve num : ";
             cin>>a;
-            cout << "n1 :" << sqrt(a) << endl;
+            }while(a<0);
+            cout <<"Result : "<< sqrt(a) << endl;
             break;
         //Fcatorial
         case '!':
-            cout<<"Enter num : ";
+            do{
+            cout<<"Enter a +ve num : ";
             cin>>a;
-            cout<<fact(a);
+            }while(a<0);
+            cout<<"Result : "<<fact(a);
             break;
         case 'P':
             input();
-            cout<<pow(a,b);
+            cout<<"Result : "<<pow(a,b);
             break;
         case 'q':
             cout<<"Exiting";
