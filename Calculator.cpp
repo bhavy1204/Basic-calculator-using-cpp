@@ -100,7 +100,7 @@ public:
     }
     //factorial function
     int fact(int n){
-        int res;
+        int res=1;
         for (int i = 1; i <= n; i++)
         {
             res *=i;
