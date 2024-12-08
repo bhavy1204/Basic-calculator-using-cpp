@@ -78,6 +78,17 @@ public:
             }while(a<0);
             cout <<"Result : "<< sqrt(a) << endl;
             break;
+        //sum
+        case 'F':
+            cout<<"ENter num ";
+            cin>>a;
+            int sum=0;
+            for (int i = 0; i < a; i++)
+            {
+                sum+=i;
+            }
+            coutt<<sum;
+            break;
         //Fcatorial
         case '!':
             do{
