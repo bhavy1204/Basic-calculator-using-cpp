@@ -87,7 +87,7 @@ public:
             {
                 sum+=i;
             }
-            coutt<<sum;
+            cout<<sum;
             break;
         //Fcatorial
         case '!':
